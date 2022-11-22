@@ -1,50 +1,41 @@
 {
-  "name": "properties",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@reach/combobox": "^0.16.5",
-    "@react-google-maps/api": "^2.7.0",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.1.3",
-    "@testing-library/user-event": "^13.5.0",
-    "axios": "^0.26.0",
-    "bootstrap": "^5.2.2",
-    "react": "^17.0.2",
-    "react-bootstrap": "^2.6.0",
-    "react-dom": "^17.0.2",
-    "react-router-dom": "^6.2.2",
-    "react-scripts": "5.0.0",
-    "use-places-autocomplete": "^1.11.0",
-    "web-vitals": "^2.1.4"
-  },
+  "name": "realestateapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node utils/seedLocalDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run install-client && npm run build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.7",
-    "tailwindcss": "^3.0.23"
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.18.7"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.0",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "bootstrap": "^5.1.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.3",
+    "express-session": "^1.17.1",
+    "gh-pages": "^3.1.0",
+    "if-env": "^1.0.4",
+    "material-ui": "^0.20.2",
+    "moment": "^2.29.1",
+    "mongoose": "^5.3.16",
+    "morgan": "^1.10.0",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "react-bootstrap": "^2.0.3",
+    "react-router-dom": "^5.2.0"
   }
 }
