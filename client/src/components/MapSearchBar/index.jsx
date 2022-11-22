@@ -24,7 +24,7 @@ const MapSearchBar = ({setSearchResults, panTo }) => {
     }
     return (ready) ? (
         <Combobox onSelect={address => addressSelected(address)} >
-            <ComboboxInput className=" z-10 max-w-[30%] p-3 w-full border rounded h-11 text-l absolute left-[15%] top-[27%]" value={value} onChange={e => setValue(e.target.value)} disabled={!ready} placeholder="Enter an address, city, neighborhood, or ZIP code"/>
+            <ComboboxInput className=" z-10 max-w-[30%] p-3 w-full border rounded h-11 text-l absolute left-[0.6%] top-[10%]" value={value} onChange={e => setValue(e.target.value)} disabled={!ready} placeholder="Enter an address, city, neighborhood, or ZIP code"/>
             <ComboboxPopover>
                 <ComboboxList>
                     {status === "OK" && data.map(({description, place_id}) => <ComboboxOption value={description} key={place_id}/>)}  

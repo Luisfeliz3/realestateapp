@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import {post, get} from "../../http/service"
 import ListHomes from "../ListHomes"
+import ListingsNavBar from "../ListingsNavBar"
 const Tabs = ({ loggedIn, setLoggedIn, searchResults, setSearchResults }) => {
   const [openTab, setOpenTab] = React.useState(1);
   const [savedHomes, setSavedHomes] = React.useState([])
@@ -17,7 +18,10 @@ const Tabs = ({ loggedIn, setLoggedIn, searchResults, setSearchResults }) => {
       setSavedHomes(results.data.home_list.savedHomes)
     })  
   }
-
+  const handleClick = ()=>{
+      console.log("click!")
+  }
+  
   useEffect(() => {
     let savedIDs = savedHomes.map(home => home.listing_id_api)
     setSaved(searchResults.map(listing => {
@@ -58,6 +62,7 @@ const Tabs = ({ loggedIn, setLoggedIn, searchResults, setSearchResults }) => {
 
   return (
     <>
+    
       <div className="flex flex-wrap">
         <div className="w-full h-[89vh]">
           <ul
@@ -82,6 +87,7 @@ const Tabs = ({ loggedIn, setLoggedIn, searchResults, setSearchResults }) => {
               >
                 Search Results
               </a>
+              <ListingsNavBar/>
             </li>
             <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
@@ -112,7 +118,9 @@ const Tabs = ({ loggedIn, setLoggedIn, searchResults, setSearchResults }) => {
                     {searchResults.map((listing,index) => {
                       return (
                         <div className="col-12 col-lg-6 my-2" key={listing.listing_id}>
-                          <div className=" border-2 rounded">
+                          <div 
+                           onClick={() => handleClick()} style={{cursor : 'pointer'}}
+                          className=" border-2 rounded">
                             {listing.photo_count ? <img src={listing.photo} className=" h-36 mx-auto" alt="house" /> : <div className="h-36 flex justify-center items-center"><p>No Photo Available</p></div>}
                             <div>
                               <p className=" text-left ml-2 mt-2">{listing.price}</p>
