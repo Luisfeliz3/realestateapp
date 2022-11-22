@@ -1,7 +1,7 @@
 import usePlacesAutocomplete, {getGeocode, getLatLng, getZipCode} from "use-places-autocomplete"
 import {Combobox, ComboboxInput, ComboboxPopover, ComboboxList, ComboboxOption} from "@reach/combobox"
 import "@reach/combobox/styles.css";
-import findHomes from "../http/findHomes";
+import findHomes from "../../http/findHomes";
 
 const MapSearchBar = ({setSearchResults, panTo }) => { 
     const {ready, value, suggestions: {status, data}, setValue, clearSuggestions} = usePlacesAutocomplete({requestOptions: {componentRestrictions: {country: "us"}}})

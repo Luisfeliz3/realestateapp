@@ -1,10 +1,10 @@
 // THIS COMPONENT IS FROM FREE & OPEN SOURCE TAILWIND EXTENSION https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/navbars    
 
 import React from "react";
-import Popup from "./Popup";
-import SignUp from "./SignUp";
-import SignOut from "./SignOut";
-import LogIn from "./LogIn";
+import Popup from "../../components/Popup";
+import SignUp from "../../pages/SignUp";
+import SignOut from "../../pages/SignOut";
+import LogIn from "../../pages/LogIn";
 import { Link } from "react-router-dom";
 
 export default function Navbar({ loggedIn, setLoggedIn }) {

@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom"
 import {GoogleMap, Marker, InfoWindow} from "@react-google-maps/api"
-import MapSearchBar from "./MapSearchBar"
-import FilterBar from "./FilterBar"
+import MapSearchBar from "../../components/MapSearchBar"
+import FilterBar from "../../components/FilterBar"
 import { useRef, useCallback, useState, useEffect } from "react"
-import TabsView from "./TabsView"
+import TabsView from "../../components/TabsView"
 import {getGeocode, getLatLng, getZipCode} from "use-places-autocomplete"
-import findHomes from "../http/findHomes"
+import findHomes from "../../http/findHomes"
 
 const mapContainerStyle = {
     width: "50vw",

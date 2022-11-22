@@ -1,9 +1,9 @@
-const { mongoOptions, sessionOptions } = require("./utils/config");
-const passport = require("./utils/passport");
+const { mongoOptions, sessionOptions } = require("./backEnd/utils/config");
+const passport = require("./backEnd/utils/passport");
 const session = require("express-session");
 const mongoose = require("mongoose");
 const express = require("express");
-const routes = require("./routes");
+const routes = require("./backEnd/routes");
 const logger = require("morgan");
 const cors = require('cors')
 const app = express();

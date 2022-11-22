@@ -1,9 +1,9 @@
 
 import './App.css';
-import Navbar from './components/Navbar';
+import Navbar from './components/NavBar';
 import {Routes, Route} from "react-router-dom"
-import HomePage from "./components/HomePage"
-import MapSearch from './components/MapSearch';
+import HomePage from "./pages/HomePage"
+import MapSearch from './pages/MapSearchPage';
 import EditUser from './components/EditUser';
 import { useState } from "react"
 

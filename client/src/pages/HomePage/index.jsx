@@ -1,8 +1,8 @@
-import HomeSearchBar from "./HomeSearchBar"
-import InfoCard from "./InfoCard"
-import signup from "../assets/signup.jpg"
-import search_homes from "../assets/search_homes.png"
-import buy_home from "../assets/buy_home.svg"
+import HomeSearchBar from "../../components/HomeSearchBar"
+import InfoCard from "../../components/InfoCard"
+import signup from "../../assets/signup.jpg"
+import search_homes from "../../assets/search_homes.png"
+import buy_home from "../../assets/buy_home.svg"
 
 const HomePage = (props) => {
   return (

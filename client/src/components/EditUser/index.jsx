@@ -1,5 +1,5 @@
 import { useState } from "react"
-import {get, post} from "../http/service"
+import {get, post} from "../../http/service"
 import { useNavigate } from "react-router-dom"
 
 const EditUser = ({setLoggedIn}) => {

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import {post, get} from "../http/service"
-import ListHomes from "../components/ListHomes"
+import {post, get} from "../../http/service"
+import ListHomes from "../ListHomes"
 const Tabs = ({ loggedIn, setLoggedIn, searchResults, setSearchResults }) => {
   const [openTab, setOpenTab] = React.useState(1);
   const [savedHomes, setSavedHomes] = React.useState([])
