@@ -44,7 +44,7 @@ export default function Navbar({ loggedIn, setLoggedIn }) {
                 <Nav.Link id="nav_link" eventKey="link-1">Invest</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link id="nav_link" eventKey="link-1">Buy</Nav.Link>
+                <Nav.Link  href="/user/buy" id="nav_link" eventKey="link-1">Buy</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link id="nav_link" eventKey="link-1">Sell</Nav.Link>

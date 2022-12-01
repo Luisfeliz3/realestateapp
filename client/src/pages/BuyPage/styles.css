@@ -1,0 +1,52 @@
+#search-bar {
+    position: absolute;
+    z-index: 3;
+    /* put .gold-box above .green-box and .dashed-box */
+    /* background: gold; */
+    width: 50%;
+    left:400px;
+    top: 20em;
+  font-family: 'Cardo', serif;
+  padding:10px;
+}
+
+p{
+    font-size: 36px;
+    color: #eeeeee;
+   
+}
+
+section {
+    position: relative;
+    padding: 20px;
+    margin: 0;
+    min-height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    /* background: #8ebf42; */
+    /* color: #eeeeee; */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+    width: 300px;
+    height: 200px;
+    line-height: 200px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -150px;
+    background-color: #8ebf42;
+    border-radius: 40px;
+    text-align: center;
+    z-index: 11;
+}
