@@ -14,19 +14,15 @@ const mapContainerStyle = {
 
 const MapSearch = props => {
     const {address} = useParams()
-
     const [searchResults, setSearchResults] = useState([])
     const [selectedMarker, setSelectedMarker] = useState(null)
-   
     const mapRef = useRef()
-
     const onMapLoad = useCallback((map) => {
         mapRef.current = map
     }, [])
 
     const panTo = useCallback(({lat, lng}) => {
         mapRef.current.panTo({lat, lng})
-
     }, [])
 
     const infowindowstuff = listing => {
@@ -41,7 +37,6 @@ const MapSearch = props => {
 
     useEffect(()=> {
             const realaddress = address.replace("&", " ")
-        
             getGeocode({address: realaddress}).then(results => {
                 getZipCode(results[0]).then((zip) => {
                     findHomes(zip, realaddress).then(results => {
@@ -49,15 +44,14 @@ const MapSearch = props => {
                     }).catch(err => {
                         console.log(`an error happened : ${err}`)
                     }).then(() => {
-
                         getLatLng(results[0]).then(({lat, lng}) => {
-                            panTo({lat,lng})
-                            
+                            panTo({lat,lng})                    
                         })
                     })
                 })
             })
     }, [address, panTo])
+
 
     return (
       <>

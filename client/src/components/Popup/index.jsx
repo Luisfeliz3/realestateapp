@@ -8,7 +8,7 @@ import React from "react";
   return (
     <>
       <p
-        className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 cursor-pointer"
+        className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-grey hover:opacity-75 cursor-pointer"
         onClick={() => setShowModal(true)}
       >
         {props.title}

@@ -1,0 +1,14 @@
+#search-bar{
+     position: absolute;
+  z-index: 3; /* put .gold-box above .green-box and .dashed-box */
+  /* background: gold; */
+  width: 50%;
+  left: 60px;
+  top: 30em;
+  /* background-color:black; */
+  
+}
+
+img{
+    margin : 0px;
+}
