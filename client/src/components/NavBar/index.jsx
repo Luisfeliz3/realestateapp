@@ -41,19 +41,19 @@ export default function Navbar({ loggedIn, setLoggedIn }) {
           >
             <Nav id="second_nav">
               <Nav.Item>
-                <Nav.Link id="nav_link" eventKey="link-1">Invest</Nav.Link>
+                <Nav.Link href="/user/invest" id="nav_link" eventKey="link-1">Invest</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link  href="/user/buy" id="nav_link" eventKey="link-1">Buy</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link id="nav_link" eventKey="link-1">Sell</Nav.Link>
+                <Nav.Link href="/user/sell" id="nav_link" eventKey="link-1">Sell</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link id="nav_link" eventKey="link-1">Testimonials</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link id="nav_link" eventKey="link-1">Contact Us</Nav.Link>
+                <Nav.Link href="/contactus" id="nav_link" eventKey="link-1">Contact Us</Nav.Link>
               </Nav.Item>
               <NavDropdown  title="Social Media" id="nav_link">
 
