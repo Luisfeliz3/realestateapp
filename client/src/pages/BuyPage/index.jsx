@@ -9,7 +9,7 @@ const BuyPage = (loggedIn,setLoggedIn) => {
   return (
     <div>
      
-        {/* <MapSearchPage /> */}
+        <MapSearchPage />
      
     </div>
   );

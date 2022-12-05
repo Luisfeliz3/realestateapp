@@ -31,6 +31,7 @@ const MapSearchBar = ({setSearchResults, panTo }) => {
                 </ComboboxList>
             </ComboboxPopover>
         </Combobox>
+        
     ) :
     (
         <div>Loading map search...</div>
