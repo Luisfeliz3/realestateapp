@@ -13,7 +13,7 @@ const InvestPage = (props) => {
         {/* <h2>Creating an Overlay with an Absolutely Positioned Element</h2> */}
         <div className="overlay">
           <div id="buy-search-bar">
-            <p>
+            <p className="hijar-bio">
               A house is made of bricks and beams. A home is made of hopes and
               dreams. We’ll help you find your home.
             </p>

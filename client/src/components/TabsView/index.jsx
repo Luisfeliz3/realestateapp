@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import {post, get} from "../../http/service"
 import ListHomes from "../ListHomes"
 import ListingsNavBar from "../ListingsNavBar"
+import "./styles.css"
 const Tabs = ({ loggedIn, setLoggedIn, searchResults, setSearchResults }) => {
   const [openTab, setOpenTab] = React.useState(1);
   const [savedHomes, setSavedHomes] = React.useState([])
@@ -66,15 +67,15 @@ const Tabs = ({ loggedIn, setLoggedIn, searchResults, setSearchResults }) => {
       <div className="flex flex-wrap">
         <div className="w-full h-[89vh]">
           <ul
-            className="flex mb-0 list-none flex-wrap pb-3 flex-row"
+            className="tab_list"
             role="tablist"
           >
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <li>
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                  "search_results_link " +
                   (openTab === 1
-                    ? "text-white bg-emerald-600"
+                    ? "text-white bg-gray-600"
                     : "text-emerald-600 bg-white")
                 }
                 onClick={e => {
@@ -87,12 +88,12 @@ const Tabs = ({ loggedIn, setLoggedIn, searchResults, setSearchResults }) => {
               >
                 Search Results
               </a>
-              <ListingsNavBar/>
+             
             </li>
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <li>
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                  "saved_results_link " +
                   (openTab === 2
                     ? "text-white bg-emerald-600"
                     : "text-emerald-600 bg-white")
@@ -110,6 +111,7 @@ const Tabs = ({ loggedIn, setLoggedIn, searchResults, setSearchResults }) => {
               </a>
             </li>
           </ul>
+          <ListingsNavBar/>
           <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded overflow-y-scroll h-[81vh]">
             <div className="px-3 py-3 flex-auto">
               <div className="tab-content tab-space">

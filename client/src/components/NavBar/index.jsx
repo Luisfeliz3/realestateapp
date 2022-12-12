@@ -44,7 +44,7 @@ export default function Navbar({ loggedIn, setLoggedIn }) {
                 <Nav.Link href="/user/invest" id="nav_link" eventKey="link-1">Invest</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link  href="/user/buy" id="nav_link" eventKey="link-1">Buy</Nav.Link>
+                <Nav.Link href='/homes/:address'  id="nav_link" eventKey="link-1">Buy</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link href="/user/sell" id="nav_link" eventKey="link-1">Sell</Nav.Link>
@@ -68,7 +68,8 @@ export default function Navbar({ loggedIn, setLoggedIn }) {
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+            {/* <ul className="flex flex-col lg:flex-row list-none lg:ml-auto"> */}
+              <ul>
               {loggedIn ? (
                 <>
                   <li className="nav-item">
@@ -82,7 +83,7 @@ export default function Navbar({ loggedIn, setLoggedIn }) {
                   </li>
                   <li className="nav-item">
                     <Link
-                      className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
+                      // className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
                       to="/user/edit"
                     >
                       Edit Profile

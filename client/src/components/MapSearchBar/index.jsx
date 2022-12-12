@@ -2,6 +2,8 @@ import usePlacesAutocomplete, {getGeocode, getLatLng, getZipCode} from "use-plac
 import {Combobox, ComboboxInput, ComboboxPopover, ComboboxList, ComboboxOption} from "@reach/combobox"
 import "@reach/combobox/styles.css";
 import findHomes from "../../http/findHomes";
+import "./styles.css";
+
 
 const MapSearchBar = ({setSearchResults, panTo }) => { 
     const {ready, value, suggestions: {status, data}, setValue, clearSuggestions} = usePlacesAutocomplete({requestOptions: {componentRestrictions: {country: "us"}}})
@@ -23,8 +25,8 @@ const MapSearchBar = ({setSearchResults, panTo }) => {
         })
     }
     return (ready) ? (
-        <Combobox onSelect={address => addressSelected(address)} >
-            <ComboboxInput className=" z-10 max-w-[30%] p-3 w-full border rounded h-11 text-l absolute left-[0.6%] top-[10%]" value={value} onChange={e => setValue(e.target.value)} disabled={!ready} placeholder="Enter an address, city, neighborhood, or ZIP code"/>
+        <Combobox  onSelect={address => addressSelected(address)} >
+            <ComboboxInput className="search_bar" value={value} onChange={e => setValue(e.target.value)} disabled={!ready} placeholder="Enter an address, city, neighborhood, or ZIP code"/>
             <ComboboxPopover>
                 <ComboboxList>
                     {status === "OK" && data.map(({description, place_id}) => <ComboboxOption value={description} key={place_id}/>)}  

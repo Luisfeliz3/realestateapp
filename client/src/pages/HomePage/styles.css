@@ -1,3 +1,9 @@
+
+
+body {
+   background-color: black
+}
+
 #search-bar{
      position: absolute;
   z-index: 3; /* put .gold-box above .green-box and .dashed-box */
@@ -13,23 +19,266 @@ img{
     margin : 0px;
 }
 
-.main-box {
+
+
+.main-box-1 {
+  /* border: 1px solid black; */
+  margin: 1rem;
+  padding: 2rem 2rem;
+  /* padding-left : 290px; */
+  text-align: left;
+  width : 800px;
+  font-size: 75px;
+  font-family: 'Cardo', serif;
+  text-decoration: underline;
+  color :grey;
+  background-color : black;
+}
+
+.main-box-2 {
+  /* border: 1px solid rgb(163, 57, 57); */
+  margin: 1rem;
+  padding: 2rem 2rem;
+  /* padding-left : 290px; */
+  text-align: left;
+  width : 800px;
+  font-size: 75px;
+  font-family: 'Cardo', serif;
+  text-decoration: underline;
+  color :grey;
+  background-color : black;
+}
+.main-box{
+  display: flex;
+}
+.main-box-text{
+  font-size: 25px;
+
+}
+
+.promo {
   border: 1px solid black;
   margin: 1rem;
   padding: 2rem 2rem;
-  text-align: center;
+  /* padding-left : 290px; */
+  text-align: left;
+  /* width : 800px; */
+  font-size: 75px;
+  font-family: 'Cardo', serif;
+  color :grey;
+  background-color : rgb(106, 99, 99);
+  display: flex;
+  padding-left : 400px;
+
 }
 
-.boxed-1 {
-  display: inline-block;
-  border: 1px solid red;
-  padding: 1rem 1rem;
-  vertical-align: middle; 
+.hijar-bio{
+  -ms-text-size-adjust: 20%;
 }
-.boxed-2{
-  display: inline-block;
-  border: 1px solid red;
-  padding: 1rem 1rem;
-  vertical-align: middle;
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400");
+
+* {
+	box-sizing: border-box;
 }
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+/* body {
+	font-family: Raleway, sans-serif;
+	text-align: center;
+	margin: 0;
+	padding: 1rem;
+	background-color: rgba(10, 12, 18, 1);
+	color: white;
+	min-height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+} */
+
+p {
+	margin: 0;
+}
+
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(168, 239, 255, 1);
+	--c2: rgba(168, 239, 255, 0.1);
+}
+
+.wrapper {
+	/* min-width: min(40rem, 100%); */
+  display: flex;
+  /* display: inline-block; */
+}
+
+.box, .boxed {
+	font-size: 3vw;
+	margin: max(1rem, 3vw);
+  width : 830px;
+  height : 550px;
+	border: 0.35rem solid;
+	padding: 3vw;
+	/* border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite reverse; */
+}
+
+.boxed {
+	/* border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+	animation: borderRadial var(--d) linear infinite forwards; */
+}
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}       
+
+
+.sides {
+  animation: 0.7s curtain cubic-bezier(.86,0,.07,1) 0.4s both;
+  
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+}
+
+
+@keyframes curtain {
+  0% {
+    grid-gap: 100vw; 
+  }
+  
+  100% {
+    grid-gap: 0;
+  }
+}
+
+
+
+
+
+
+
+/* 
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Arial Black", sans-serif;
+} */
+
+.intro {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.sides {
+  position: relative;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  font-size: 6vw;
+}
+
+.monkey {
+  background-color: #dcc9a1;
+  color: #534325;
+}
+
+.robot {
+  background-color: #1b636f;
+  color: #ffffff;
+  flex-direction: column-reverse;
+}
+
+.name {
+  margin: 0.3em;
+}
+
+.emoji {
+  font-size: 3em;
+}
+
+.versus {
+  position: absolute;
+  width: 8vw;
+  height: 8vw;
+  background: #ffffff;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.4vw;
+  color: grey;
+  border-width: 10px;
+  border-style: solid;
+  border-color: grey;
+  font-family: 'Cardo', serif;
+
+  transform: rotate(-45deg);
+}
+
+.versus span {
+  transform: rotate(45deg);
+}
+
+
 
