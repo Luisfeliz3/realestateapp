@@ -97,6 +97,7 @@ export default function Navbar({ loggedIn, setLoggedIn }) {
                       loggedIn={loggedIn}
                       setLoggedIn={setLoggedIn}
                       title="Sign Up"
+                      id="sign_up"
                     >
                       <SignUp />
                     </Popup>
@@ -106,6 +107,7 @@ export default function Navbar({ loggedIn, setLoggedIn }) {
                       loggedIn={loggedIn}
                       setLoggedIn={setLoggedIn}
                       title="Log In"
+                      id="log_in"
                     >
                       <LogIn />
                     </Popup>

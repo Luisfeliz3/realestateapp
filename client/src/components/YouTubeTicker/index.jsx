@@ -4,16 +4,22 @@ import youtube_black_white from "../../assets/youtube_black_white.png";
 function YouTubeTicker() {
   return (
     <div>
-      <div class="overflow-hidden">
-        <div class="flex -mx-4 img-ticker">
+      <div className="overflow-hidden">
+        <div className="flex -mx-4 img-ticker">
           <div className="promo">
-            Check out our
+            Check Out Our
             <img id="youtube" src={youtube_black_white} />
-            channel
+            Channel
           </div>
-          
         </div>
       </div>
+
+
+      <div className="promo_small">
+            <p>Check Out Our</p>
+            <img id="youtube" src={youtube_black_white} />
+            Channel
+          </div>
     </div>
   );
 }

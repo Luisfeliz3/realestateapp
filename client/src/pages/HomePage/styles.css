@@ -4,23 +4,6 @@ body {
    background-color: black
 }
 
-#search-bar{
-     position: absolute;
-  z-index: 3; /* put .gold-box above .green-box and .dashed-box */
-  /* background: gold; */
-  width: 50%;
-  left: 60px;
-  top: 30em;
-  /* background-color:black; */
-  
-}
-
-img{
-    margin : 0px;
-}
-
-
-
 .main-box-1 {
   /* border: 1px solid black; */
   margin: 1rem;
@@ -33,6 +16,35 @@ img{
   text-decoration: underline;
   color :grey;
   background-color : black;
+}
+
+@media all and (min-width: 380px) and (max-width: 768px) { 
+
+  #landing_page_img{
+      width: 500%;
+      height :auto;
+  }
+
+  .main-box{
+    flex-direction: column;
+  }
+  .main-box-1{
+    width: 100%;
+  }
+
+  #hijar_title{
+   font-size: 40%;
+  }
+
+}
+
+#search-bar{
+  position: absolute;
+  z-index: 3; 
+  width: 50%;
+  left: 60px;
+  top: 30em;
+  
 }
 
 .main-box-2 {
@@ -50,33 +62,18 @@ img{
 }
 .main-box{
   display: flex;
+  
 }
 .main-box-text{
   font-size: 25px;
 
 }
 
-.promo {
-  border: 1px solid black;
-  margin: 1rem;
-  padding: 2rem 2rem;
-  /* padding-left : 290px; */
-  text-align: left;
-  /* width : 800px; */
-  font-size: 75px;
-  font-family: 'Cardo', serif;
-  color :grey;
-  background-color : rgb(106, 99, 99);
-  display: flex;
-  padding-left : 400px;
 
-}
 
 .hijar-bio{
   -ms-text-size-adjust: 20%;
 }
-
-
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:400");
 
@@ -101,20 +98,6 @@ img{
   initial-value: 0%;
   inherits: true;
 }
-
-/* body {
-	font-family: Raleway, sans-serif;
-	text-align: center;
-	margin: 0;
-	padding: 1rem;
-	background-color: rgba(10, 12, 18, 1);
-	color: white;
-	min-height: 100vh;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-} */
 
 p {
 	margin: 0;
@@ -142,14 +125,8 @@ p {
   height : 550px;
 	border: 0.35rem solid;
 	padding: 3vw;
-	/* border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
-	animation: borderRotate var(--d) linear infinite reverse; */
 }
 
-.boxed {
-	/* border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
-	animation: borderRadial var(--d) linear infinite forwards; */
-}
 
 @keyframes borderRotate {
 	100% {
@@ -198,20 +175,6 @@ p {
     grid-gap: 0;
   }
 }
-
-
-
-
-
-
-
-/* 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  font-family: "Arial Black", sans-serif;
-} */
 
 .intro {
   height: 100%;
@@ -280,5 +243,9 @@ body {
   transform: rotate(45deg);
 }
 
+#landing_page_img{
+  width: 100%;
+  height: auto;
+}
 
 

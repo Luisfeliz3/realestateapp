@@ -6,6 +6,36 @@
 
 }
 
+ul{
+   display: inline-flex;
+   margin-left: 300px;
+}
+
+
+
+
+
+
+
+
+@media all and (min-width: 380px) and (max-width: 768px) { 
+   #home {
+     
+      margin-left:-10px;
+    }
+
+    #second_nav{
+      /* display: flex;
+      flex-direction: row; */
+      margin-left : -210px;
+      flex-direction: column;
+  
+
+   }
+
+
+}
+
 
 #second_nav{
    padding-left : 290px;
@@ -14,8 +44,14 @@ font-family: 'Cardo', serif;
  
 }
 
+
+
 #nav_link{
    color:rgb(82, 81, 81);
    font-weight:bold;
    font-size: 20px;
 }
+
+
+
+

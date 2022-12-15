@@ -1,6 +1,7 @@
-import { useState, } from "react"
+import { useState, } from "react";
+import { post } from "../../http/service";
+import "./styles.css";
 
-import { post } from "../../http/service"
 
 const SignUp = (props) => {
     const [username, setUsername] = useState("")
